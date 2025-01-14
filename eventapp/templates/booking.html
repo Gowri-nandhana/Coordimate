@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/booking.css' %}">
+</head>
+<body>
+    <div class="event-booking">
+        <div class="image-container">
+          <img src="https://www.uaecentral.com/wp-content/uploads/2019/11/Event-Management.jpg" alt="Event Booking" />
+          
+          <img src="https://jannatevents.com/wp-content/uploads/2022/08/wedding-event-management.jpg" alt="">
+          <h1>MAKE YOUR EVENTS EXTRAORDINARY</h1>
+        </div>
+        <div class="form-container">
+          <h1>Event Booking</h1>
+          <p>Book your special day with ease!</p>
+          <form action="{% url 'event_booking' %}" method="post">
+            {% csrf_token %}
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+            
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <label for="event-type">Select Event type</label>
+            <select name="event-type" id="event-type" required>
+              <option value="select">Select</option>
+              <option value="wedding">Wedding</option>
+              <option value="birthday">Birthday</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="others">Others</option>
+            </select>
+            <input type="date" name="event-date" required />
+            <input
+              type="number"
+              name="guests"
+              placeholder="Enter number of guests"
+              required
+            />
+            <input
+              type="text"
+              name="venue"
+              placeholder="Enter a preferred venue"
+              required
+            />
+            <textarea
+              name="notes"
+              id="notes"
+              rows="4"
+              placeholder="Any special requirements or requests?"
+            ></textarea>
+            <button type="submit">Book now</button>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

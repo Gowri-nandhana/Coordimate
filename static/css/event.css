@@ -1,0 +1,67 @@
+.event-image img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+  }
+  
+  .card {
+    margin-top: 2rem;
+    padding: 10px;
+    width: 25%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  
+  .event-image h1{
+      text-align: center;
+      color: rgba(165, 42, 42, 0.585);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.5em;
+    
+  }
+  
+  .card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.9em;
+  }
+  
+  .card .highlight {
+    font-weight: bold;
+    color:rgba(165, 42, 42, 0.585) ;
+  }
+  
+  .empty-message {
+    text-align: center;
+    color: #666;
+    font-size: 1.2em;
+  }
+  
+  button {
+    background-color: rgba(165, 42, 42, 0.585);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  button:hover{
+      background-color: #007bffb8;
+  }
+  

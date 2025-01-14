@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+  </head>
+  <body>
+    <div class="reg_img">
+      <img src="https://wallpapercave.com/wp/wp10715778.jpg" alt="" />
+    </div>
+    <h1>User Registration</h1>
+    <form method="post" action="{% url 'user_registration' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter your name"
+        required
+      />
+      <input
+        type="text"
+        name="address"
+        id="address"
+        placeholder="Enter your Address"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your Email id"
+        required
+      />
+      <input
+        type="text"
+        name="phone"
+        id="phone"
+        placeholder="Enter your contact number"
+        required
+      />
+      <input
+        type="date"
+        name="dob"
+        id="dob"
+        placeholder="Enter your DOB"
+        required
+      />
+      <label for="user_image">Upload a photo</label>
+      <input type="file" name="user_image" id="user_image" />
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>

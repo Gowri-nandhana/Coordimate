@@ -1,0 +1,67 @@
+.reg_img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .reg_img img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  form{
+    margin-left: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin: 15px 0;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="Address"],
+  input[type="file"],
+  button {
+    width: 60%;
+    margin: 10px 0;
+  
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  input[type="file"] {
+    padding: 5px;
+  }
+  
+  button {
+    background-color: rgba(165, 42, 42, 0.759);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  @media (min-width: 768px) {
+    form {
+      margin-left: 28rem;
+    }
+  }
+  

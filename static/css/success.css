@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/static/images/Event-Management.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #ff6f91, #ff9671);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomIn 1.8s ease-in-out;
+}
+
+a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255, 105, 135, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

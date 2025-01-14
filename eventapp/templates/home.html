@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+          <div class="logo"><span>Coordi</span>Mate</div>
+    
+          <ul class="nav-links">
+            <li>
+              <a href="#Home"><span>Home</span></a>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li>
+              <a href="#services"><span>Services</span></a>
+            </li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li>
+              <a href="#contact"><span>Contact</span></a>
+            </li>
+            <li><a href="{% url 'user_registration' %}" class="btn">Sign Up</a></li>
+          </ul>
+    
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://wa.me" target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </nav>
+        <div class="hero-content slide-right">
+            <h1>Make Your Events Extraordinary</h1>
+            <p>From weddings to corporate events, we bring your vision to life.</p>
+            <a href="#services" class="btn">Explore Services</a>
+          </div>
+        </header>
+    
+        <section class="about">
+          <div class="about-boxes slide-left">
+            <div class="about-box">
+              <img src="static/images/team.png" alt="" width="80px" height="80px" />
+            </div>
+    
+            <div class="about-box">
+              <img
+                src="static/images/mission.png"
+                alt=""
+                width="80px"
+                height="80px"
+              />
+            </div>
+            <div class="about-box">
+              <img
+                src="static/images/service.png"
+                alt=""
+                width="80px"
+                height="80px"
+              />
+            </div>
+          </div>
+          <h1>WHO WE ARE</h1>
+          <h3>OUR TEAM | OUR MISSION | OUR SERVICES</h3>
+          <p>
+            "We are a passionate and dedicated team of event management
+            professionals, committed to turning ideas into unforgettable
+            experiences.<br />
+            Our mission is to provide seemlesss,innovative, and memorable event
+            management services that reflect our clients vision and values.<br />
+            Our services includes Event planning, venue decor , Vendor coordination
+            , On-site management ,Budjet optimizations etc.."
+          </p>
+        </section>
+    
+        <section>
+          <div class="services">
+            <h1>OUR SERVICES</h1>
+            <div class="service-boxes slide-left">
+              <div class="service-box">
+                <h1>Event planning</h1>
+                <p>
+                  comprehensive planning for social,corporate and personal events
+                </p>
+              </div>
+              <div class="service-box">
+                <h1>Venue Decor</h1>
+                <p>Curating the perfect location and designing stunning themes</p>
+              </div>
+              <div class="service-box">
+                <h1>Catering</h1>
+                <p>Managing food and beverage vendors</p>
+              </div>
+              <div class="service-box">
+                <h1>On-site management</h1>
+                <p>Ensuring smooth execution and handling all logistics</p>
+              </div>
+              <div class="service-box">
+                <h1>Transportation</h1>
+                <p>Organizing transportation for guestsa and equipments</p>
+              </div>
+              <div class="service-box">
+                <h1>Photography and videography</h1>
+                <p>Hiring professionals to capture the event</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="portfolio" class="portfolio">
+          <div class="container">
+              <h2>Our Past Events</h2>
+              <p>Swipe through our showcase of successful and memorable events.</p>
+              <div class="horizontal-gallery">
+                  <div class="gallery-item">
+                      <img src="/static/images/wedding.jpg" alt="Wedding">
+                      <h3>Elegant Wedding Ceremony</h3>
+                  </div>
+                  <div class="gallery-item">
+                      <img src="/static/images/corporate.jpg" alt="Corporate">
+                      <h3>Corporate Product Launch</h3>
+                  </div>
+                  <div class="gallery-item">
+                      <img src="/static/images/music.jpg" alt="Concert">
+                      <h3>Music Festival</h3>
+                  </div>
+                  <div class="gallery-item">
+                      <img src="/static/images/birthday.jpg" alt="Birthday">
+                      <h3>Vibrant Birthday Party</h3>
+                  </div>
+                  <div class="gallery-item">
+                      <img src="/static/images/art.jpg" alt="Exhibition">
+                      <h3>Art and Cultural Exhibition</h3>
+                  </div>
+                  <div class="gallery-item">
+                      <img src="/static/images/conferece.png" alt="Conference">
+                      <h3>Business Conference</h3>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach out for inquiries, bookings, or feedback.</p>
+
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Address:</strong> EventPro, Building No: 32, Bangalore, India</p>
+                    <p><strong>Phone:</strong> +91 9653115790</p>
+                    <p><strong>Email:</strong> <a href="mailto:eventpro@gmail.com">eventpro@gmail.com</a></p>
+                    <p><strong>Follow Us:</strong></p>
+                    <ul class="social-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+
+                <!-- Map and Form -->
+                <div class="map-form">
+                    <!-- Dummy Map -->
+                    <div class="map">
+                        <img src="https://miro.medium.com/max/1200/1*XmJNRu6Fzn4woXyUoORydQ.png" alt="Map">
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form action="#" method="post" class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="tel" name="phone" placeholder="Your Phone" required>
+                        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+          
+      
+    
+
+</html>

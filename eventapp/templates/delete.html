@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/delete.css' %}">
+  </head>
+  <body>
+    <form method="post" action="{% url 'delete_event' delete_value.id %}">
+        {% csrf_token %}
+        <h1>Are you sure you want to Cancel the booking?</h1>
+        <textarea name="notes" id="notes" rows="4" placeholder="Any inconvenience? Please let us know!"></textarea>
+        <button type="submit">Confirm Cancellation</button>
+        
+    </form>
+    
+  </body>
+</html>
