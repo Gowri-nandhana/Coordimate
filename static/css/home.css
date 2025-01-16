@@ -484,6 +484,7 @@ body {
 /* Contact Form */
 .contact-form {
   flex: 1;
+  width: 100%;
   min-width: 300px;
   text-align: left;
 }
@@ -521,6 +522,40 @@ body {
 .contact-form button:hover {
   background-color: #0056b3;
 }
+
+
+footer{
+  display: flex;
+  padding: 50px;
+}
+
+.logo-link{
+  flex: 1;
+  font-size: 1rem;
+}
+
+.quick-links a{
+  text-decoration: none;
+  color: grey;
+  
+}
+
+.quick-links{
+  flex: 1;
+  list-style: none;
+ 
+}
+
+.quick-links h1{
+  color: #333;
+  font-size: 20px;
+}
+
+.address{
+  flex: 1;
+  color: grey;
+}
+
   @media (max-width: 768px) {
     .contact-section {
       flex-direction: column;
@@ -531,5 +566,7 @@ body {
       flex: 1 1 100%;
     }
   }
+
+
 
 

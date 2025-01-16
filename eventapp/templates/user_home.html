@@ -35,6 +35,7 @@
               <p><strong>Phone:</strong> {{ user_data.phone }}</p>
               <p><strong>Address:</strong> {{ user_data.address }}</p>
               <p><strong>Date of Birth:</strong> {{ user_data.dob }}</p>
+              <button><a href="{% url 'user_edit' user_data.id %}">Edit profile</a></button>
             </div>
             {% else %}
             <div id="profile-details" class="profile-details">

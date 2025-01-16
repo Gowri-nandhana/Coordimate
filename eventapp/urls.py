@@ -15,4 +15,6 @@ urlpatterns = [
     path('edit_event/<int:pk>',views.edit_event,name='edit_event'),
     path('edititem/<int:pk>',views.edititem,name='edititem'),
     path('success_page',views.success_page,name='success_page'),
+    path('user_edit/<int:pk>',views.user_edit,name='user_edit'),
+    path('useritem/<int:pk>',views.useritem,name='useritem'),
 ]

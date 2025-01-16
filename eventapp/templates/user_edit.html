@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/user_edit.css' %}">
+</head>
+<body>
+    
+    <form method="post" action="{% url 'useritem' user_value.id %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>EDIT YOUR DETAILS HERE !</h1>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          value="{{user_value.name}}"
+          required
+        />
+        <input
+          type="text"
+          name="address"
+          id="address"
+          value="{{user_value.address}}"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value="{{user_value.email}}"
+          required
+        />
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          value="{{user_value.phone}}"
+          required
+        />
+        <input
+          type="date"
+          name="dob"
+          id="dob"
+          value="{{user_value.dob|date:'Y-m-d'}}"
+          required
+        />
+        <label for="user_image">Upload a photo</label>
+        <input type="file" name="user_image" id="user_image" value="{{edit_value.image}}" />
+        <img src="{{edit_value.image.url}}" alt="" width="50px" height="50px">
+        <button type="submit">SUBMIT</button>
+      </form>
+</body>
+</html>

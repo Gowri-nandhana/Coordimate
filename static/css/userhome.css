@@ -141,3 +141,8 @@ span {
 .event-info button:hover {
   background-color: rgba(165, 42, 42, 0.586);
 }
+
+.profile-details button{
+  background-color: green;
+  padding: 10px;
+}

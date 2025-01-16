@@ -127,3 +127,27 @@ def edititem(request,pk):
 
 def success_page(request):
     return render(request,'success.html')
+
+def user_edit(request,pk):
+    user_data=UserRegister.objects.get(id=pk)
+    return render(request,'user_edit.html',{'user_value':user_data})
+
+def useritem(request,pk):
+    if request.method=='POST':
+        edit_item=UserRegister.objects.get(id=pk)
+        old=edit_item.image
+        new=request.FILES.get('user_image')
+        if old != None and new == None:
+            edit_item.image=old
+        else:
+            edit_item.image=new
+        edit_item.name=request.POST['name']
+        edit_item.address=request.POST['address']
+        edit_item.email=request.POST['email']
+        edit_item.phone=request.POST['phone']
+        edit_item.dob=request.POST['dob']
+        edit_item.save()
+        return redirect('user_homepage')
+
+    
+    
